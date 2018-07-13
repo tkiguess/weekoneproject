@@ -28,17 +28,24 @@ public class weekone {
         System.out.println("How many do you have? ");
         itemQuantity02 = planner.nextInt();
 
+        double Cost1 = itemPrice01 + itemQuantity01;
+        double Cost2 = itemPrice02 + itemQuantity02;
+
         System.out.println("Item Name       Price      Quantity     Cost");
 
-        System.out.println(itemName01 + "       $" + itemPrice01 + "      " + itemQuantity01 + "      " + (itemPrice01 * itemQuantity01));
+        System.out.println(itemName01 + "       $" + itemPrice01 + "        " + itemQuantity01 + "      " + Cost1);
 
 
-        System.out.println(itemName02 + "       $" + itemPrice02 + "      " + itemQuantity02 + "      " + (itemPrice02 * itemQuantity02));
+        System.out.println(itemName02 + "       $" + itemPrice02 + "        " + itemQuantity02 + "      " + Cost2);
 
 
-        System.out.println( "Total purchase amount: $" + ((itemPrice01 * itemQuantity01) + (itemPrice02 * itemQuantity02)));
+        System.out.println( "Total purchase amount: $" + ( Cost1 + Cost2));
 
+        if (Cost1 + Cost2 > 20) {
+            System.out.println( "You spent too much today");
+        }
 
+        System.out.println("Thank you for shopping at my market!");
     }
 
 }
